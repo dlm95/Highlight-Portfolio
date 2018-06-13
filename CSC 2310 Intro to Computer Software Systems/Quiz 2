@@ -1,0 +1,21 @@
+# Bryanna Peterson
+# program is to calculate the average of three numbers
+# Registers used:
+#    v0 - reads values
+#    t0 - used to hold results addition results
+#    a0 - print the outout string
+
+	.data
+	prompt:   	.asciiz " The average of 1,2,3 is 2"
+
+
+	
+
+	
+	.text
+main:
+	
+	la $a0, prompt 		# display prompt om screen
+	li $v0,4
+	syscall
+	

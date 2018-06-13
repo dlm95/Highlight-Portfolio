@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=brand\ size
+comment0.target=Television(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Televison\r\n
+comment1.params=
+comment1.target=int\ getVolume()
+comment2.params=
+comment2.target=int\ getChannel()
+comment3.params=
+comment3.target=java.lang.String\ getManufacturer()
+comment4.params=
+comment4.target=int\ getScreenSize()
+comment5.params=station
+comment5.target=void\ setChannel(int)
+comment6.params=
+comment6.target=void\ power()
+comment7.params=
+comment7.target=void\ increaseVolume()
+comment8.params=
+comment8.target=void\ decreaseVolume()
+numComments=9

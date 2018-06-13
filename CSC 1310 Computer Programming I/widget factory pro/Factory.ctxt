@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=w
+comment0.target=void\ setamount(int)
+comment1.params=r
+comment1.target=void\ setrate(double)
+comment2.params=d
+comment2.target=void\ setdays(double)
+comment3.params=
+comment3.target=int\ getamount()
+comment4.params=
+comment4.target=double\ getrate()
+comment5.params=
+comment5.target=double\ getdays()
+numComments=6

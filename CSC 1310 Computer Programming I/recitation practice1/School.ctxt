@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=one
+comment0.target=void\ setScore1(int)
+comment1.params=two
+comment1.target=void\ setScore2(int)
+comment2.params=
+comment2.target=float\ getaverage()
+comment3.params=
+comment3.target=int\ getTotal()
+numComments=4

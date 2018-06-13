@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+C:\Users\dlm95_000\Documents\Winston\CSC Data Struct\.metadata\.plugins\org.eclipse.jdt.core
+132620216.index
+9067425.index
+2024644680.index
+2475773926.index
+1347296216.index

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=str
+comment0.target=boolean\ isFormatted(java.lang.String)
+comment0.text=\n\ \ \ \ \ \ The\ isFormatted\ method\ determines\ whether\ a\n\ \ \ \ \ \ string\ is\ properly\ formatted\ as\ a\ US\ telephone\n\ \ \ \ \ \ number\ in\ the\ following\ manner\:\n\ \ \ \ \ \ (XXX)XXX-XXXX\n\ \ \ \ \ \ @param\ str\ The\ string\ to\ test.\n\ \ \ \ \ \ @return\ true\ if\ the\ string\ is\ properly\ formatted,\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ or\ false\ otherwise.\n
+comment1.params=str
+comment1.target=java.lang.String\ unformat(java.lang.String)
+comment1.text=\n\ \ \ \ \ \ The\ unformat\ method\ accepts\ a\ string\ containing\n\ \ \ \ \ \ a\ telephone\ number\ formatted\ as\:\n\ \ \ \ \ \ (XXX)XXX-XXXX.\n\ \ \ \ \ \ If\ the\ argument\ is\ formatted\ in\ this\ way,\ the\n\ \ \ \ \ \ method\ returns\ an\ unformatted\ string\ where\ the\n\ \ \ \ \ \ parentheses\ and\ hyphen\ have\ been\ removed.\ Otherwise,\n\ \ \ \ \ \ it\ returns\ the\ original\ argument.\n\ \ \ \ \ \ @param\ str\ The\ string\ to\ unformat.\n\ \ \ \ \ \ @return\ An\ unformatted\ string.\n
+comment2.params=str
+comment2.target=java.lang.String\ format(java.lang.String)
+comment2.text=\n\ \ \ \ \ \ The\ format\ method\ formats\ a\ string\ as\:\ \n\ \ \ \ \ \ (XXX)XXX-XXXX.\n\ \ \ \ \ \ If\ the\ length\ of\ the\ argument\ is\ UNFORMATTED_LENGTH\n\ \ \ \ \ \ the\ method\ returns\ the\ formatted\ string.\ Otherwise,\n\ \ \ \ \ \ it\ returns\ the\ original\ argument.\n\ \ \ \ \ \ @param\ str\ The\ string\ to\ format.\n\ \ \ \ \ \ @return\ A\ string\ formatted\ as\ a\ US\ telephone\ number.\n
+numComments=3

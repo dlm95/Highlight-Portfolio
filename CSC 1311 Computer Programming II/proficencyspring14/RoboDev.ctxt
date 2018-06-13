@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=n\ g\ h\ r
+comment0.target=RoboDev(java.lang.String[],\ double[],\ int[],\ double[])
+comment1.params=
+comment1.target=void\ task1()
+comment2.params=
+comment2.target=void\ task2()
+comment3.params=weekly_pay\ pay_rate
+comment3.target=void\ task3(double[],\ int[])
+comment4.params=weekly_pay\ pay_rate
+comment4.target=void\ task4(double[],\ int[])
+comment5.params=
+comment5.target=void\ task5()
+comment6.params=name\ weekly_pay\ pay_rate
+comment6.target=void\ task6(java.lang.String[],\ double[],\ int[])
+numComments=7

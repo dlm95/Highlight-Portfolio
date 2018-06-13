@@ -1,0 +1,20 @@
+# Bryanna Peterson
+# Registers used:
+#    a0 - print the outout string
+
+	.data
+	str:   	.asciiz "Hello World!!"
+	
+		
+	.text
+main:
+	
+	li $t0,3		# display prompt om screen
+	la $a0,str
+	li $v0,4
+loop: beqz $t0, end
+	syscall
+	sub $t0, $t0,1
+	j loop
+end: li $v0, 10
+	

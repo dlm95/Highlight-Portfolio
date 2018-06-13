@@ -1,0 +1,43 @@
+# Sum of Integers
+# Derrick Murphy
+# Date last modified:
+# Functional Description:
+# A program to find the Sum of the Integers from 1 to N, where N is a value
+# input from the keyboard.
+
+# main: cout << “Please input a value for N”
+# cin >> v0
+# If ( v0 <= 0 ) stop
+# t0 = 0;
+# While (v0 > 0 ) do
+# {
+# t0 = t0 + v0;
+# v0 = v0 - 1;
+# }
+# cout << t0;
+# go to main
+
+	.data
+
+prompt: .asciiz "\n Please Input a value for N ="
+result: .asciiz "The sum of the integers from 1 to N is "
+bye: 	.asciiz "\n ****  Have a good day ****"
+	.globl main
+	.text
+
+main:
+	li 	$a0, 0 		# $a0 = 0
+	li 	$t0, 10 	# Initialize loop counter to 10	
+
+loop:
+	add 	$a0, $a0, $t0
+	addi 	$t0, $t0, -1 	# Decrement loop counter
+  	bgtz 	$t0, loop 	# If ($t0 > 0) Branch to loop
+
+	
+end: 	li 	$v0, 4 		# system call code for Print String
+	la 	$a0, bye 	# load address of msg. into $a0
+	syscall 		# print the string
+
+	li 	$v0, 10 	# terminate program run and
+	syscall 		# return control to system

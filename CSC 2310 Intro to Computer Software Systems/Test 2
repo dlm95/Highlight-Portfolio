@@ -1,0 +1,75 @@
+# Bryanna Peterson
+# program calculate the change that needs to be given back to the customer
+# Registers used:
+#    $v0 - reads amount of purchase
+#     $v1- read amount given	
+#    $t0 - used to  store amounts
+#    $a0 - print the outout string
+
+.data
+prompt:		.asciiz "Please enter the number of customers \n"
+prompt2:	.asciiz "Processing Customer "
+prompt3:	.asciiz "\n What is the amount of your purchase ? \n"
+prompt4:	.asciiz "How much did you pay? \n"
+prompt5:	.asciiz "Your change is $"
+prompt6:	.asciiz "\n Thank you for shopping with us!"
+
+.text
+
+
+	la $a0, prompt
+	li $v0,4
+	syscall
+	
+	li $v0, 5
+	syscall
+	
+	move $t1, $v0
+	
+main:	la $a0, prompt2
+	li $v0, 4
+	syscall
+	
+	move $a0, $t1
+	
+	li $v0, 1
+	syscall
+	
+	la $a0, prompt3
+	li $v0, 4
+	syscall
+	
+		
+	li $v0, 5
+	syscall
+	
+	move $t2, $v0
+	
+	la $a0, prompt4
+	li $v0, 4
+	syscall
+	
+		
+	li $v0, 5
+	syscall
+	
+	move $t3, $v0
+	
+	sub $t2, $t3, $t2
+	
+	la $a0, prompt5
+	li $v0, 4
+	syscall
+	
+	move $a0, $t2
+	
+	li $v0, 1
+	syscall
+	
+	la $a0, prompt6
+	li $v0, 4
+	syscall
+	
+loop:	sub $t1, $t1, 1
+	bgtz $t1, main
+	

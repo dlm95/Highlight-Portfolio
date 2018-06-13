@@ -1,0 +1,94 @@
+class Point(object):
+    """Represents a point in 2-D space."""
+
+
+
+blank = Point()
+
+blank.x = 3.0
+blank.y = 4.0
+
+def print_point(p):
+	print('(%g, %g)' % (p.x, p.y))
+	
+class Rectangle(object):
+    """Represents a rectangle. 
+
+    attributes: width, height, corner.
+    """
+print_point(blank)
+
+	
+box = Rectangle()
+box.width = 100.0
+box.height = 200.0
+box.corner = Point()
+box.corner.x = 0.0
+box.corner.y = 0.0
+	
+
+def find_center(rect):
+    p = Point()
+    p.x = rect.corner.x + rect.width/2.0
+    p.y = rect.corner.y + rect.height/2.0
+    return p
+
+center = find_center(box)
+
+print_point(center)
+
+def grow_rectangle(rect, dwidth, dheight):
+	
+    rect.width += dwidth
+    rect.height += dheight
+	
+
+grow_rectangle(box,50,100)
+#print_point(grow_rectangle)
+
+class Time(object):
+    """Represents the time of day.
+       
+    attributes: hour, minute, second
+    """
+
+time = Time()
+time.hour = 11
+time.minute = 59
+time.second = 30
+
+def add_time(t1, t2):
+    sum = Time()
+    sum.hour = t1.hour + t2.hour
+    sum.minute = t1.minute + t2.minute
+    sum.second = t1.second + t2.second
+    return sum
+	
+def add_time(t1, t2):
+    sum = Time()
+    sum.hour = t1.hour + t2.hour
+    sum.minute = t1.minute + t2.minute
+    sum.second = t1.second + t2.second
+
+    if sum.second >= 60:
+        sum.second -= 60
+        sum.minute += 1
+
+    if sum.minute >= 60:
+        sum.minute -= 60
+        sum.hour += 1
+
+    return sum
+	
+def increment(time, seconds):
+    time.second += seconds
+
+    if time.second >= 60:
+        time.second -= 60
+        time.minute += 1
+
+    if time.minute >= 60:
+        time.minute -= 60
+        time.hour += 1
+
+

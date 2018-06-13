@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=b\ c
+comment0.target=bank(double,\ int)
+comment0.text=\r\n\ constructor\r\n
+comment1.params=
+comment1.target=int\ getFine()
+comment1.text=\r\n\ is\ balance\ <\ 400\r\n
+comment2.params=
+comment2.target=double\ getFee()
+comment2.text=\r\n\ return\ check\ fees\r\n
+comment3.params=
+comment3.target=double\ getBalance()
+comment3.text=\r\n\ return\ final\ balance\r\n
+numComments=4

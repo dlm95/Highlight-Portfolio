@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function fillHidTable(){
+    var htqf; //-- hidden field
+    var rf; //-- retrieved field
+    for ( var i = 1; i < 12; i++ ) {
+        rf = "htqf"+i;
+        document.getElementById(rf).innerHTML = document.getElementById("Q"+i+"CALC").value;
+    }
+    tableToExcel('hidTable', 'Analysis Results');
+}
+
+var tableToExcel = (function() {
+    var uri = 'data:application/vnd.ms-excel;base64,'
+            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+            , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+            , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+    return function(table, name) {
+        if (!table.nodeType) table = document.getElementById(table)
+        var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+        window.location.href = uri + base64(format(template, ctx))
+    }
+})()
+</script>
+
+<title>HTML Form Data to Excel</title>
+
+<style type="text/css" media="screen">
+    .divCenMid{font-family:Arial,sans-serif;font-size:14pt;font-style:normal;font-weight:700;text-align:center;vertical-align:middle;margin:0;}
+    .allbdrCenMid{border:.75pt solid windowtext;color:#000;font-family:Arial,sans-serif;font-size:10pt;font-style:normal;font-weight:400;text-align:center;vertical-align:middle;margin:0;}
+    .allbdrCenTop{border:.75pt solid windowtext;color:#000;font-family:Arial,sans-serif;font-size:10pt;font-style:normal;font-weight:400;text-align:center;vertical-align:top;margin:0;}
+    .allbdrLtMid{border:.75pt solid windowtext;color:#000;font-family:Arial,sans-serif;font-size:10pt;font-style:normal;font-weight:400;text-align:left;vertical-align:middle;margin:0;}
+    .allbdrLtTop{border:.75pt solid windowtext;color:#000;font-family:Arial,sans-serif;font-size:10pt;font-style:normal;font-weight:400;text-align:left;vertical-align:top;margin:0;}
+
+</style>
+
+</head>
+
+<body>
+
+<table width= "565px" cellspacing="0" cellpadding="0" style="border-spacing:0;" id="QMSTable">
+    <col width="25px"/>
+    <col width="120px"/>
+    <col width="60px"/>
+    <!-- <col width="60px"/> -->
+    <tr>
+        <td class="divCenMid" colspan = "4"> Student Outcome</td>
+    </tr>
+	
+	<td class="allbdrCenMid"> Student Name</td>
+	<td class="allbdrCenMid">
+            <input id="Q10CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q10CALC"/>
+        </td>
+		<tr>
+	<td class="allbdrCenMid"> Course Name</td>
+	<td class="allbdrCenMid">
+            <input id="Q11CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q11CALC"/>
+        </td>
+		</tr>
+	
+    <tr>
+        <td class="allbdrCenMid"> ~</td>
+        <td class="allbdrCenMid"> Criteria</td>
+        <td class="allbdrCenMid"> Outcome</td>
+    </tr>
+    <tr>
+        <td class="allbdrCenTop"> A</td>
+        <td class="allbdrLtTop"> An ability to apply knowledge of computing and mathematics appropriate to the program's student outcomes and to the discipline</td>
+        <td class="allbdrCenMid">
+            <input id="Q1CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q1CALC"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="allbdrCenTop"> B</td>
+        <td class="allbdrLtTop"> An ability to analyze a problem, and identify and define the computing requirements appropriate to its solution</td>
+        <td class="allbdrCenMid">
+            <input id="Q2CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q2CALC"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="allbdrCenTop"> C</td>
+        <td class="allbdrLtTop"> An ability to design, implement, and evaluate a computer-based system, process, component, or program to meet desired needs</td>
+        <td class="allbdrCenMid">
+            <input id="Q3CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q3CALC"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="allbdrCenTop"> D</td>
+        <td class="allbdrLtTop">An ability to function effectively on teams to accomplish a common goal</td>
+        <td class="allbdrCenMid">
+            <input id="Q4CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q4CALC"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="allbdrCenTop"> E</td>
+        <td class="allbdrLtTop">An understanding of professional, ethical, legal, security and social issues and responsibilities</td>
+        <td class="allbdrCenMid">
+            <input id="Q5CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q5CALC"/>
+        </td>
+    </tr>
+	<tr>
+        <td class="allbdrCenTop"> F</td>
+        <td class="allbdrLtTop">An ability to communicate effectively with a range of audiences</td>
+        <td class="allbdrCenMid">
+            <input id="Q6CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q6CALC"/>
+        </td>
+    </tr>
+	<tr>
+        <td class="allbdrCenTop"> G</td>
+        <td class="allbdrLtTop">An ability to analyze the local and global impact of computing on individuals, organizations, and society</td>
+        <td class="allbdrCenMid">
+            <input id="Q7CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q7CALC"/>
+        </td>
+    </tr>
+	<tr>
+        <td class="allbdrCenTop"> H</td>
+        <td class="allbdrLtTop">Recognition of the need for and an ability to engage in continuing professional development</td>
+        <td class="allbdrCenMid">
+            <input id="Q8CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q8CALC"/>
+        </td>
+    </tr>
+	<tr>
+        <td class="allbdrCenTop"> I</td>
+        <td class="allbdrLtTop">An ability to use current techniques, skills, and tools necessary for computing practice.</td>
+        <td class="allbdrCenMid">
+            <input id="Q9CALC" type="text" value="" class="nobdrCenMid" style="overflow:hidden; width:93% " name="Q9CALC"/>
+        </td>
+    </tr>
+</table>
+
+<div id="hidTable" style="display: none">
+    <table id="testTable">
+        <caption>Student Outcome</caption>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+        <colgroup></colgroup>
+		
+		<tr>
+		<td>Student Name</td>
+            <td id="htqf10">-</td>
+		</tr>
+		<tr>
+		<td>Course Name</td>
+            <td id="htqf11">-</td>
+		</tr>
+			
+        <thead>
+        <tr>
+            <th>~</th>
+            <th>Criteria</th>
+            <th>Outcome</th>
+        </tr>
+        </thead>
+		
+        <tbody>
+        <tr>
+            <td>A</td>
+            <td>An ability to apply knowledge of computing and mathematics appropriate to the program's student outcomes and to the discipline</td>
+            <td id="htqf1">-</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>An ability to analyze a problem, and identify and define the computing requirements appropriate to its solution</td>
+            <td id="htqf2">-</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>An ability to design, implement, and evaluate a computer-based system, process, component, or program to meet desired needs</td>
+            <td id="htqf3">-</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>An ability to function effectively on teams to accomplish a common goal</td>
+            <td id="htqf4">-</td>
+        </tr>
+		<tr>
+            <td>E</td>
+            <td>An understanding of professional, ethical, legal, security and social issues and responsibilities</td>
+            <td id="htqf5">-</td>
+        </tr>
+		<tr>
+            <td>F</td>
+            <td>An ability to communicate effectively with a range of audiences</td>
+            <td id="htqf6">-</td>
+        </tr>
+		<tr>
+            <td>G</td>
+            <td>An ability to analyze the local and global impact of computing on individuals, organizations, and society</td>
+            <td id="htqf7">-</td>
+        </tr>
+		<tr>
+            <td>H</td>
+            <td>Recognition of the need for and an ability to engage in continuing professional development</td>
+            <td id="htqf8">-</td>
+        </tr>
+		<tr>
+            <td>I</td>
+            <td>An ability to use current techniques, skills, and tools necessary for computing practice.</td>
+            <td id="htqf9">-</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<input type="button" onclick="fillHidTable()" value="Export Data to Excel">
+</body>
+</html>

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=w\ m
+comment0.target=shipping(int,\ int)
+comment0.text=\r\n\ constructor\r\n
+comment1.params=
+comment1.target=double\ getRate()
+comment1.text=\r\n\ return\ rate\r\n
+comment2.params=
+comment2.target=int\ getWeight()
+comment2.text=\r\n\ return\ weight\r\n
+comment3.params=
+comment3.target=int\ getMiles()
+comment3.text=\r\n\ return\ miles\r\n
+numComments=4

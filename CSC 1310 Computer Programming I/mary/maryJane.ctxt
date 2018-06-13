@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=g
+comment0.target=void\ setGrams(int)
+comment1.params=p
+comment1.target=void\ setPrice(int)
+comment2.params=
+comment2.target=int\ getGrams()
+comment3.params=
+comment3.target=double\ getPrice()
+comment4.params=
+comment4.target=double\ getReup()
+comment5.params=
+comment5.target=int\ getLeft()
+comment6.params=
+comment6.target=int\ getpotential()
+numComments=7

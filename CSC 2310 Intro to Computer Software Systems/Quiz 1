@@ -1,0 +1,16 @@
+# Bryanna Peterson
+# Registers used:
+#    a0 - print the outout string
+
+	.data
+	prompt:   	.asciiz "Hello World!!"
+	
+		
+	.text
+main:
+	
+	la $a0, prompt 		# display prompt om screen
+	li $v0,4
+	syscall
+	
+	

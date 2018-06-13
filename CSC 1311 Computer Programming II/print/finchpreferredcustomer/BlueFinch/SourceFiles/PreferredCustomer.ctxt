@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PreferredCustomer()
+comment1.params=n\ pn\ ad\ cn\ em\ ml\ p\ dl
+comment1.target=PreferredCustomer(java.lang.String,\ int,\ java.lang.String,\ int,\ java.lang.String,\ boolean,\ double,\ double)
+comment2.params=
+comment2.target=double\ getPurchases()
+comment3.params=
+comment3.target=double\ getDiscountLevel()
+comment4.params=
+comment4.target=double\ getPurchaseAmount()
+numComments=5

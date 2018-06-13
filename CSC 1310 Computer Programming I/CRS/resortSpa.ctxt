@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=d\ s\ S\ mp\ cs\ sc\ mc
+comment0.target=void\ resortSpa(int,\ double,\ double,\ double,\ char,\ char,\ char)
+comment1.params=s\ cs
+comment1.target=void\ setSuite(double,\ char)
+comment2.params=S\ sc
+comment2.target=void\ setSpa(double,\ char)
+comment3.params=mp\ mc
+comment3.target=void\ setMealplan(double,\ char)
+comment4.params=d
+comment4.target=void\ setDays(int)
+comment5.params=
+comment5.target=int\ getDays()
+comment6.params=
+comment6.target=double\ getSuite()
+comment7.params=
+comment7.target=double\ getSpa()
+comment8.params=
+comment8.target=double\ getMealplan()
+numComments=9

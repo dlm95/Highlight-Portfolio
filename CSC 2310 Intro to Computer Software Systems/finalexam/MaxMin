@@ -1,0 +1,77 @@
+#Derrick Murphy
+#Find Max and Min of List of numbers
+.data
+
+prompt:	     	.asciiz "Enter number or type '-5' to exit.\n"
+stop:		.word -5
+output1:   	.asciiz "\nThe minimum number is: "
+output2:	.asciiz "\n\nThe maximum number is: "
+array:   	.word 0
+end: 		.asciiz "\n"
+
+.text 
+
+.globl numbers  
+
+numbers:
+
+la $s0, array
+li $s1, 0
+
+main:
+
+li $v0, 4
+la $a0, prompt #prompt on screen
+syscall
+
+li $v0, 5
+syscall
+
+lw $t0, stop #to stop program
+beq $v0, $t0, next
+sw $v0, 0($s0)
+addi $s0, $s0, 4
+addi $s1, $s1, 1
+b main
+
+next:
+
+la $s0, array
+lw $t0, 0($s0)
+lw $t1, 0($s0)
+
+min:
+
+lw $t3, 0($s0)
+bge $t3, $t0, max
+add $t0, $0, $t3
+
+max:
+
+ble $t3, $t1, result
+add $t1, $0, $t3
+
+result:
+
+add $s0, $s0, 4
+addi $s1, $s1, -1
+bne $s1, $0, min 
+
+li $v0, 4
+la $a0, output1
+syscall
+
+add $a0, $0, $t0
+li $v0, 1
+syscall
+
+li $v0, 4
+la $a0, output2
+syscall
+
+add $a0, $0, $t1
+li $v0, 1
+syscall
+
+li $v0, 10
+syscall

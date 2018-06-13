@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=u
+comment0.target=software(int)
+comment0.text=\r\n\ constructor\ accepts\ number\ of\ units\ sold\r\n
+comment1.params=
+comment1.target=int\ getUnits()
+comment1.text=\r\n\ getUnits\ returns\ the\ units\r\n
+comment2.params=
+comment2.target=double\ getCost()
+comment2.text=\r\n\ getCost\ returns\ final\ cost\r\n
+numComments=3

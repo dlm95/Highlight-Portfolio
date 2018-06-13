@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=p\ a
+comment0.target=charge(double,\ double)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ charge\r\n
+comment1.params=
+comment1.target=double\ getInterest()
+comment2.params=
+comment2.target=double\ getnewBalance()
+comment3.params=
+comment3.target=double\ getminPay()
+numComments=4
